@@ -1,5 +1,5 @@
 <?php
-// Tools menu page
+// Tools menu page for plugin
 ?>
 
 <div class='wrap'>
@@ -18,9 +18,10 @@
 </div>
 <?php endif; ?>
 
-<p><?php printf(__('Expired transients: %s', 'delxtrans'), number_format_i18n($expiredCount)); ?></p>
+<p><?php printf(__('Expired transients: %s', 'delxtrans'), number_format_i18n($counts->expired)); ?></p>
+<p><?php printf(__('Total transients: %s', 'delxtrans'), number_format_i18n($counts->total + $counts->never_expire)); ?></p>
 
-<form action="<?php echo $_SERVER['SCRIPT_NAME']; ?>?page=delxtrans" method="post">
+<form action="<?php echo admin_url('tools.php'); ?>?page=delxtrans" method="post">
 
 	<table class="form-table">
 

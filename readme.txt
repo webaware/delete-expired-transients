@@ -6,8 +6,8 @@ Author URI: http://www.webaware.com.au/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NJEL3SS8PBBJN
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.2.1
-Tested up to: 3.6
-Stable tag: 1.0.0
+Tested up to: 3.6.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ delete old, expired transients from WordPress wp_options table
 
 Delete old, expired transients from the WordPress options table (`wp_options`), to prevent them from bloating your database and even slowing down your website.
 
-Unless you are using an object cache (like memcached), WordPress stores transient records in the options table. Many transients are given an expiration time, so in theory they should disappear after some time. In practise, because old transients are only deleted when requested again after they've expired, many transients stay in the database long after they've expired. After a while, there can be thousands or even millions of expired transients needlessly taking up space in your options table.
+Unless you are using an object cache (like memcached), WordPress stores transient records in the options table. Many transients are given an expiration time, so in theory they should disappear after some time. In practise, because old transients are only deleted when requested again after they've expired, many transients stay in the database. After a while, there can be thousands or even millions of expired transients needlessly taking up space in your options table.
 
 Delete Expired Transients schedules a daily task to delete any expired transients from the options table. It performs this operation with a single SQL query, and then runs a second query to find any orphaned expiration records and deletes them too.
 
@@ -48,17 +48,17 @@ With the current way that the transients API works, expired transients are only 
 
 Only if you have a plugin that is really badly written. Transients can be deleted for a variety of reasons, because by definition they are considered ephemeral. They are considered safe to delete at any time because they are supposedly only ever going to contain information that can be rebuilt.
 
-There are some notable exceptions, e.g. WooCommerce, WP e-Commerce, and some other shopping carts store cart sessions in transients; this is obviously not information that can be easily rebuilt. That data will only be deleted by this plugin if it has expired, which means it would be deleted by WordPress anyway, so it is safe to use this plugin with shopping carts.
+There are some notable exceptions, e.g. some shopping carts store cart sessions in transients; this is obviously not information that can be easily rebuilt. That data will only be deleted by this plugin if it has expired, which means it would be deleted by WordPress anyway, so it is safe to use this plugin with shopping carts.
 
 = How do I know it's working? =
 
-On the Tools menu in the WordPress admin, you will find a screen for deleting expired transients. It tells you how many expired transients there are in your database.
+On the Tools menu in the WordPress admin, you will find a screen for deleting transients. It tells you how many expired transients there are in your database.
 
-NB: after you install and activate this plugin, the first thing it does is schedule a housekeeping task to delete expired transients. This means that there won't be any transients found when you visit this page in the tools menu straight after installing the plugin, because they'll have already been deleted. You probably never need to delete expired transients manually, because they'll be automatically deleted daily.
+NB: after you install and activate this plugin, the first thing it does is schedule a housekeeping task to delete expired transients. This means that there may not be any transients found when you visit this page in the tools menu straight after installing the plugin, because they may have already been deleted. You probably never need to delete expired transients manually, because they'll be automatically deleted daily.
 
 = Do I need this if I'm running an object cache? =
 
-No. Object caches are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily -- and shopping carts that put cart sessions in transients are taking risks with your data! See this article on the WPEngine blog for more details: [A Technical Transients Treatise](http://wpengine.com/2013/02/wordpress-transient-api/).
+No. Object caches are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](http://wpengine.com/2013/02/wordpress-transient-api/).
 
 = Can I change the schedule to run more often? =
 
@@ -102,6 +102,11 @@ order by t1.option_value desc;`
 1. Tools page for manually deleting transients
 
 == Changelog ==
+
+= 1.1.0 [2013-10-19] =
+* fixed: manual delete failed in WordPress multisite installations
+* changed: use LIKE instead of REGEXP in SQL statements, so that database index is utilised (better performance)
+* added: also clean up the essentially transient display_galleries_* records for NextGEN Gallery 2.0.x
 
 = 1.0.0 [2013-07-27] =
 * initial public release

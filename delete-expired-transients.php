@@ -3,7 +3,7 @@
 Plugin Name: Delete Expired Transients
 Plugin URI: http://snippets.webaware.com.au/wordpress-plugins/delete-expired-transients/
 Description: delete old, expired transients from WordPress wp_options table
-Version: 1.0.0
+Version: 1.1.0
 Author: WebAware
 Author URI: http://www.webaware.com.au/
 Text Domain: delxtrans
@@ -75,7 +75,7 @@ class DeleteExpiredTransients {
 	* admin menu items
 	*/
 	public static function adminMenu() {
-		$title = __('Delete Expired Transients', 'delxtrans');
+		$title = __('Delete Transients', 'delxtrans');
 		add_management_page($title, $title, 'manage_options', 'delxtrans', array(__CLASS__, 'toolsDelete'));
 	}
 
@@ -110,29 +110,40 @@ class DeleteExpiredTransients {
 			}
 		}
 
-		$expiredCount = self::countExpiredTransients();
+		$counts = self::countTransients();
 
 		include DELXTRANS_PLUGIN_ROOT . 'views/admin-tools-page.php';
 	}
 
 	/**
-	* count the expired transients (including orphaned expirations)
+	* count the transients (including orphaned expirations)
 	* @return int
 	*/
-	public static function countExpiredTransients() {
+	public static function countTransients() {
 		global $wpdb;
 
-		// get current PHP time, offset by a minute to prevent clashes with other tasks
+		// get current PHP time, offset by a minute to avoid clashes with other tasks
 		$threshold = time() - 60;
 
+		// count transient expiration records, total and expired
+		$sql = "
+			select count(*) as `total`, count(case when option_value < '$threshold' then 1 end) as `expired`
+			from {$wpdb->options}
+			where (option_name like '\_transient\_timeout\_%' or option_name like '\_site\_transient\_timeout\_%')
+		";
+		$counts = $wpdb->get_row($sql);
+
+		// count never-expire transients
 		$sql = "
 			select count(*)
 			from {$wpdb->options}
-			where option_name regexp '^(_site)?_transient_timeout_.*'
-			and option_value < '$threshold';
+			where (option_name like '\_transient\_%' or option_name like '\_site\_timeout\_%')
+			and option_name not like '%\_timeout\_%'
+			and autoload = 'yes'
 		";
+		$counts->never_expire = $wpdb->get_var($sql);
 
-		return $wpdb->get_var($sql);
+		return $counts;
 	}
 
 	/**
@@ -141,23 +152,28 @@ class DeleteExpiredTransients {
 	public static function clearExpiredTransients() {
 		global $wpdb;
 
-		// get current PHP time, offset by a minute to prevent clashes with other tasks
+		// get current PHP time, offset by a minute to avoid clashes with other tasks
 		$threshold = time() - 60;
 
 		// delete expired transients, using the paired timeout record to find them
 		$sql = "
 			delete from t1, t2
-			using {$wpdb->options} t1 join {$wpdb->options} t2
-			on t2.option_name = replace(t1.option_name, '_timeout', '')
-			where t1.option_name regexp '^(_site)?_transient_timeout_.*'
+			using {$wpdb->options} t1
+			join {$wpdb->options} t2 on t2.option_name = replace(t1.option_name, '_timeout', '')
+			where (t1.option_name like '\_transient\_timeout\_%' or t1.option_name like '\_site\_transient\_timeout\_%')
 			and t1.option_value < '$threshold';
 		";
 		$wpdb->query($sql);
 
-		// delete orphaned transient expirations
+		// delete orphaned transient expirations,
+		// and clean up any "third wheel" rows left lying around by NextGEN Gallery 2.0.x
 		$sql = "
 			delete from {$wpdb->options}
-			where option_name regexp '^(_site)?_transient_timeout_.*'
+			where (
+				option_name like '\_transient\_timeout\_%'
+				or option_name like '\_site\_transient\_timeout\_%'
+				or option_name like 'displayed\_galleries\_%'
+			)
 			and option_value < '$threshold';
 		";
 		$wpdb->query($sql);
@@ -170,9 +186,12 @@ class DeleteExpiredTransients {
 		global $wpdb;
 
 		// delete all transients
+		// including NextGEN Gallery 2.0.x display cache
 		$sql = "
 			delete from {$wpdb->options}
-			where option_name regexp '^(_site)?_transient_.*'
+			where option_name like '\_transient\_%'
+			or option_name like '\_site\_transient\_%'
+			or option_name like 'displayed\_galleries\_%'
 		";
 		$wpdb->query($sql);
 	}
