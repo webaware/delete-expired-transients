@@ -6,8 +6,8 @@ Author URI: http://www.webaware.com.au/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NJEL3SS8PBBJN
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.2.1
-Tested up to: 3.6.1
-Stable tag: 1.1.0
+Tested up to: 3.8
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,9 @@ order by t1.option_value desc;`
 1. Tools page for manually deleting transients
 
 == Changelog ==
+
+= 1.1.1 [2013-12-31] =
+* fixed: manual deletion performs nonce check, to prevent unauthorised access
 
 = 1.1.0 [2013-10-19] =
 * fixed: manual delete failed in WordPress multisite installations

@@ -1,9 +1,11 @@
 <?php
 // Tools menu page for plugin
+
+global $wp_version;
 ?>
 
 <div class='wrap'>
-<?php screen_icon(); ?>
+<?php if (version_compare($wp_version, '3.8', '<')) screen_icon(); ?>
 <h2><?php _e('Delete Expired Transients', 'delxtrans'); ?></h2>
 
 <?php if ($action == 'delete-expired'): ?>
@@ -39,6 +41,7 @@
 		<th>&nbsp;</th>
 		<td>
 			<input type="submit" name="Submit" class="button-primary" value="<?php _e('Delete', 'delxtrans'); ?>" />
+			<?php wp_nonce_field('delete', 'delxtrans_wpnonce', false); ?>
 		</td>
 	</tr>
 
