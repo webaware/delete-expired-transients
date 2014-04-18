@@ -6,7 +6,7 @@ Author URI: http://www.webaware.com.au/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NJEL3SS8PBBJN
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.2.1
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
