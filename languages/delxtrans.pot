@@ -1,68 +1,138 @@
-# copyright (c) 2013 WebAware Pty Ltd
+# copyright (c) 2013-2014 WebAware Pty Ltd
 # This file is distributed under the same license as the plugin package.
 msgid ""
 msgstr ""
 "Project-Id-Version: delxtrans\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-27 15:26+1000\n"
-"PO-Revision-Date: 2013-07-27 15:26+1000\n"
+"POT-Creation-Date: 2014-08-19 08:55+1000\n"
+"PO-Revision-Date: 2014-08-19 08:55+1000\n"
 "Last-Translator: Ross McKay <rmckay@webaware.com.au>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: en_AU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-Country: AUSTRALIA\n"
 "X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../delete-expired-transients.php:78
-#: ../views/admin-tools-page.php:7
-msgid "Delete Expired Transients"
+#: ../includes/class.DelxtransNetwork.php:26
+#: ../includes/class.DelxtransSite.php:23
+msgid "Delete Transients"
 msgstr ""
 
-#: ../delete-expired-transients.php:87
-msgid "Get help"
-msgstr ""
-
-#: ../delete-expired-transients.php:88
-msgid "Rating"
-msgstr ""
-
-#: ../delete-expired-transients.php:89
-msgid "Donate"
-msgstr ""
-
-#: ../views/admin-tools-page.php:11
+#: ../includes/class.DelxtransNetwork.php:58 ../views/admin-tools-page.php:13
 msgid "Expired transients deleted."
 msgstr ""
 
-#: ../views/admin-tools-page.php:17
+#: ../includes/class.DelxtransNetwork.php:59 ../views/admin-tools-page.php:19
 msgid "All transients deleted."
 msgstr ""
 
-#: ../views/admin-tools-page.php:21
+#: ../includes/class.DelxtransNetwork.php:60
+msgid "Expired site transients deleted."
+msgstr ""
+
+#: ../includes/class.DelxtransNetwork.php:61
+msgid "All site transients deleted."
+msgstr ""
+
+#: ../includes/class.DelxtransPlugin.php:160
+msgid "Get help"
+msgstr ""
+
+#: ../includes/class.DelxtransPlugin.php:161
+msgid "Rating"
+msgstr ""
+
+#: ../includes/class.DelxtransPlugin.php:162
+msgctxt "translate from English"
+msgid "Translate"
+msgstr ""
+
+#: ../includes/class.DelxtransPlugin.php:163
+msgid "Donate"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:20
+msgctxt "a single site in network"
+msgid "Blog"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:21
+msgctxt "sites in network"
+msgid "Blogs"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:33
+msgid "Blog ID"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:34
+msgid "Blog Name"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:35
+msgid "Expired transients"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:36
+msgid "Total transients"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:57
+#: ../includes/class.DelxtransSiteListTable.php:140
+msgid "Delete expired"
+msgstr ""
+
+#: ../includes/class.DelxtransSiteListTable.php:58
+#: ../includes/class.DelxtransSiteListTable.php:144
+msgid "Delete all"
+msgstr ""
+
+#: ../views/admin-tools-page.php:9 ../views/admin-network-page.php:9
+msgid "Delete Expired Transients"
+msgstr ""
+
+#: ../views/admin-tools-page.php:23
 #, php-format
 msgid "Expired transients: %s"
 msgstr ""
 
-#: ../views/admin-tools-page.php:28
-msgid "Delete transients"
+#: ../views/admin-tools-page.php:24
+#, php-format
+msgid "Total transients: %s"
 msgstr ""
 
 #: ../views/admin-tools-page.php:31
+msgid "Delete transients"
+msgstr ""
+
+#: ../views/admin-tools-page.php:34
 msgid "expired transients"
 msgstr ""
 
-#: ../views/admin-tools-page.php:33
+#: ../views/admin-tools-page.php:36
 msgid "all transients -- use with caution!"
 msgstr ""
 
-#: ../views/admin-tools-page.php:40
+#: ../views/admin-tools-page.php:43
 msgid "Delete"
 msgstr ""
 
+#: ../views/admin-network-page.php:18
+#, php-format
+msgid "Site Transients: %s expired, %s total"
+msgstr ""
+
+#: ../views/admin-network-page.php:25
+msgid "Delete expired site transients"
+msgstr ""
+
+#: ../views/admin-network-page.php:30
+msgid "Delete all site transients"
+msgstr ""

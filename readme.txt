@@ -1,12 +1,12 @@
 === Delete Expired Transients ===
 Contributors: webaware
 Plugin Name: Delete Expired Transients
-Plugin URI: http://snippets.webaware.com.au/wordpress-plugins/delete-expired-transients/
+Plugin URI: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Author URI: http://www.webaware.com.au/
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NJEL3SS8PBBJN
+Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
-Requires at least: 3.2.1
-Tested up to: 3.9
+Requires at least: 3.7
+Tested up to: 4.0
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,11 +17,13 @@ delete old, expired transients from WordPress wp_options table
 
 Delete old, expired transients from the WordPress options table (`wp_options`), to prevent them from bloating your database and even slowing down your website.
 
-Unless you are using an object cache (like memcached), WordPress stores transient records in the options table. Many transients are given an expiration time, so in theory they should disappear after some time. In practise, because old transients are only deleted when requested again after they've expired, many transients stay in the database. After a while, there can be thousands or even millions of expired transients needlessly taking up space in your options table.
+Unless you are using an object cache (like memcached), WordPress stores transient records in the options table. Many transients are given an expiration time, so in theory they should disappear after some time. In practise, because old transients are only deleted when requested again after they've expired, many transients stay in the database. After a while, there can be thousands or even millions of expired transients needlessly taking up space in your options table, depending on what your plugins are doing.
 
 Delete Expired Transients schedules a daily task to delete any expired transients from the options table. It performs this operation with a single SQL query, and then runs a second query to find any orphaned expiration records and deletes them too.
 
 There are a few other plugins around that clean up expired transients. This one is written for fast performance, set-and-forget scheduled housekeeping, and maximum compatibility. It uses the PHP time to determine whether transients are expired, not the database time (which can be different). It does only one job, and it does it well with the minimum of resources.
+
+Now optimised for WordPress Multisite.
 
 == Installation ==
 
@@ -40,7 +42,11 @@ According to [Codex](http://codex.wordpress.org/Transients_API), transients are:
 
 NB: by default they are stored in the database, but if you have an object cache like memcached they won't be.
 
-= Why do they build up, and fill up my wp_options table? =
+= Do I need this plugin? =
+
+Most websites don't need this plugin. It all depends on what plugins are installed and how they are being used. Some plugins make heavy use of transients to improve website performance, and that can lead to a build up of old transient records in the database. If your wp_options table is growing and causing problems with website performance or backups, this plugin can help you by keeping transients under control.
+
+= Why do transients build up, and fill up my wp_options table? =
 
 With the current way that the transients API works, expired transients are only deleted when they are accessed after their expiration date. When transients are user-specific or otherwise fairly unique, they can sit there in the database forever unless some housekeeping task is run to clean them up. WordPress doesn't currently have such a housekeeping task. That's what this plugin does.
 
@@ -62,7 +68,22 @@ No. Object caches are limited pools of data, and they already purge old data per
 
 = Can I change the schedule to run more often? =
 
-Not yet. I'll consider adding a setting for that if it seems to be popular. I reckon daily is probably often enough even for busy websites.
+Not yet. I'll consider adding a setting for that if it seems to be popular. I reckon daily is often enough even for busy websites. When network activated on multisite, it runs hourly to ensure it can get around all of the sites frequently enough.
+
+= How does the plugin handle multisite? =
+
+If you activate it on individual sites within multisite, each site operates just the same as a stand-alone website.
+
+If you network activate the plugin, it operates differently. You get access to a master admin screen that allows bulk deletion of transients across multiple blogs in a network. This can also help you spot problem sites, by browsing through the list of sites and seeing if any have large numbers of transients. You can find this admin page under Settings on the multisite network admin.
+
+The scheduled task also operates differently, batching up sites to clear expired transients once every hour. The scheduled task can be initiated by activity on any blog. Only 5 blogs are cleaned on each run, so up to 120 blogs will be cleaned each day.
+
+NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](http://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean www.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
+
+== Contributions ==
+
+* [Translate into your preferred language](http://translate.webaware.com.au/projects/delete-expired-transients)
+* [Fork me on GitHub](https://github.com/webaware/delete-expired-transients)
 
 == Useful SQL queries ==
 
@@ -96,12 +117,17 @@ where t1.option_name regexp '^(_site)?_transient_timeout_.*'
 and t1.option_value < unix_timestamp()
 order by t1.option_value desc;`
 
-
 == Screenshots ==
 
 1. Tools page for manually deleting transients
+2. Multisite network admin page for manually deleting transients
 
 == Changelog ==
+
+= 2.0.0 [soon...] =
+* changed: big refactor for better multisite support
+* fixed: site transients not counted properly
+* added: also clean up NextGEN Gallery 2.x display_gallery_rendered_* timeout aliases (thanks, Robert Park!)
 
 = 1.1.1 [2013-12-31] =
 * fixed: manual deletion performs nonce check, to prevent unauthorised access
@@ -109,7 +135,7 @@ order by t1.option_value desc;`
 = 1.1.0 [2013-10-19] =
 * fixed: manual delete failed in WordPress multisite installations
 * changed: use LIKE instead of REGEXP in SQL statements, so that database index is utilised (better performance)
-* added: also clean up the essentially transient display_galleries_* records for NextGEN Gallery 2.0.x
+* added: also clean up the essentially transient display_galleries_* timeout aliases for NextGEN Gallery 2.x
 
 = 1.0.0 [2013-07-27] =
 * initial public release

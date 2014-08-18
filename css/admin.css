@@ -1,0 +1,23 @@
+/* Delete Expired Transients admin stylesheet */
+
+.delxtran-site-counts a {
+	margin-left: 1.5em;
+	text-decoration: none;
+}
+
+.delxtran-site-counts a.delete {
+	color: #a00;
+}
+
+.delxtran-site-counts a.delete:hover {
+	color: #f00;
+}
+
+.wp-list-table .column-blog_id {
+	width: 7em;
+}
+
+.wp-list-table .column-expired,
+.wp-list-table .column-total {
+	text-align: center;
+}
