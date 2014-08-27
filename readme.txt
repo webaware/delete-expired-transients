@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.0
-Stable tag: 1.1.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,7 +124,7 @@ order by t1.option_value desc;`
 
 == Changelog ==
 
-= 2.0.0 [soon...] =
+= 2.0.0 [2014-08-27] =
 * changed: big refactor for better multisite support
 * fixed: site transients not counted properly
 * added: also clean up NextGEN Gallery 2.x display_gallery_rendered_* timeout aliases (thanks, Robert Park!)
