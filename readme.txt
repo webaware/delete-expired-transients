@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,15 @@ Delete Expired Transients schedules a daily task to delete any expired transient
 There are a few other plugins around that clean up expired transients. This one is written for fast performance, set-and-forget scheduled housekeeping, and maximum compatibility. It uses the PHP time to determine whether transients are expired, not the database time (which can be different). It does only one job, and it does it well with the minimum of resources.
 
 Now optimised for WordPress Multisite.
+
+= Translations =
+
+Many thanks to the generous efforts of our translators:
+
+* Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
+* Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
+
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](http://translate.webaware.com.au/projects/delete-expired-transients).
 
 == Installation ==
 
@@ -123,6 +132,9 @@ order by t1.option_value desc;`
 2. Multisite network admin page for manually deleting transients
 
 == Changelog ==
+
+= 2.0.1 [2014-08-31] =
+* added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
 
 = 2.0.0 [2014-08-27] =
 * changed: big refactor for better multisite support

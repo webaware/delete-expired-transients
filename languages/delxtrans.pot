@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: delxtrans\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-19 08:55+1000\n"
-"PO-Revision-Date: 2014-08-19 08:55+1000\n"
+"POT-Creation-Date: 2014-08-31 16:53+1000\n"
+"PO-Revision-Date: 2014-08-31 16:54+1000\n"
 "Last-Translator: Ross McKay <rmckay@webaware.com.au>\n"
 "Language-Team: \n"
 "Language: en_AU\n"
@@ -42,19 +42,22 @@ msgid "All site transients deleted."
 msgstr ""
 
 #: ../includes/class.DelxtransPlugin.php:160
+msgctxt "plugin details links"
 msgid "Get help"
 msgstr ""
 
 #: ../includes/class.DelxtransPlugin.php:161
+msgctxt "plugin details links"
 msgid "Rating"
 msgstr ""
 
 #: ../includes/class.DelxtransPlugin.php:162
-msgctxt "translate from English"
+msgctxt "plugin details links"
 msgid "Translate"
 msgstr ""
 
 #: ../includes/class.DelxtransPlugin.php:163
+msgctxt "plugin details links"
 msgid "Donate"
 msgstr ""
 
