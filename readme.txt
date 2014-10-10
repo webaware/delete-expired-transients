@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.0
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,7 @@ Many thanks to the generous efforts of our translators:
 
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
+* Spanish (es_ES) -- [David Sandoval](http://BieberNoticias.com)
 
 If you'd like to help out by translating this plugin, please [sign up for an account and dig in](http://translate.webaware.com.au/projects/delete-expired-transients).
 
@@ -73,7 +74,7 @@ NB: after you install and activate this plugin, the first thing it does is sched
 
 = Do I need this if I'm running an object cache? =
 
-No. Object caches are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](http://wpengine.com/2013/02/wordpress-transient-api/).
+No. Object caches like memcached are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](http://wpengine.com/2013/02/wordpress-transient-api/).
 
 = Can I change the schedule to run more often? =
 
@@ -87,7 +88,7 @@ If you network activate the plugin, it operates differently. You get access to a
 
 The scheduled task also operates differently, batching up sites to clear expired transients once every hour. The scheduled task can be initiated by activity on any blog. Only 5 blogs are cleaned on each run, so up to 120 blogs will be cleaned each day.
 
-NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](http://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean www.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
+NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](http://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean blog.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
 
 == Contributions ==
 
@@ -132,6 +133,9 @@ order by t1.option_value desc;`
 2. Multisite network admin page for manually deleting transients
 
 == Changelog ==
+
+= 2.0.2 [2014-10-10] =
+* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com)!)
 
 = 2.0.1 [2014-08-31] =
 * added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
