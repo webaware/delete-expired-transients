@@ -25,7 +25,7 @@ global $wp_version;
 			echo sprintf(' <a href="%s">%s</a>', $url, __('Delete expired site transients', 'delxtrans'));
 		}
 
-		if ($site_counts->total > 0) {
+		if ($site_counts->total + $site_counts->never_expire > 0) {
 			$url = wp_nonce_url(add_query_arg('action', 'site-deleteall', $action_url), 'site-delete', 'delxtrans_nonce');
 			echo sprintf(' <a class="delete" href="%s">%s</a>', $url, __('Delete all site transients', 'delxtrans'));
 		}

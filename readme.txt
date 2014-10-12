@@ -134,6 +134,9 @@ order by t1.option_value desc;`
 
 == Changelog ==
 
+= 2.0.3 [soon...] =
+* fixed: can delete site transients when there are only never-expire site transients
+
 = 2.0.2 [2014-10-10] =
 * added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com)!)
 
