@@ -6,7 +6,7 @@ Author URI: http://www.webaware.com.au/
 Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.0
+Tested up to: 4.1.1
 Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,7 @@ Now optimised for WordPress Multisite.
 
 Many thanks to the generous efforts of our translators:
 
+* French (fr_FR) -- [Mathieu Hays](http://mathieuhays.co.uk/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 * Spanish (es_ES) -- [David Sandoval](http://BieberNoticias.com)
@@ -136,9 +137,10 @@ order by t1.option_value desc;`
 
 = 2.0.3 [soon...] =
 * fixed: can delete site transients when there are only never-expire site transients
+* added: French translation (thanks, [Mathieu Hays](http://mathieuhays.co.uk/)!)
 
 = 2.0.2 [2014-10-10] =
-* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com)!)
+* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com/)!)
 
 = 2.0.1 [2014-08-31] =
 * added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
