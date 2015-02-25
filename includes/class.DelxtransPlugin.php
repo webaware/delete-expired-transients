@@ -157,9 +157,9 @@ class DelxtransPlugin {
 	*/
 	public function addPluginDetailsLinks($links, $file) {
 		if ($file == DELXTRANS_PLUGIN_NAME) {
-			$links[] = sprintf('<a href="http://wordpress.org/support/plugin/delete-expired-transients">%s</a>', _x('Get help', 'plugin details links', 'delxtrans'));
-			$links[] = sprintf('<a href="http://wordpress.org/plugins/delete-expired-transients/">%s</a>', _x('Rating', 'plugin details links', 'delxtrans'));
-			$links[] = sprintf('<a href="http://translate.webaware.com.au/projects/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delxtrans'));
+			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/delete-expired-transients">%s</a>', _x('Get help', 'plugin details links', 'delxtrans'));
+			$links[] = sprintf('<a href="https://wordpress.org/plugins/delete-expired-transients/">%s</a>', _x('Rating', 'plugin details links', 'delxtrans'));
+			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delxtrans'));
 			$links[] = sprintf('<a href="http://shop.webaware.com.au/downloads/delete-expired-transients/">%s</a>', _x('Donate', 'plugin details links', 'delxtrans'));
 		}
 
