@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.1.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,28 +135,28 @@ order by t1.option_value desc;`
 
 == Changelog ==
 
-= 2.0.3 [soon...] =
+= 2.0.3, 2015-02-28 =
 * fixed: can delete site transients when there are only never-expire site transients
 * added: French translation (thanks, [Mathieu Hays](http://mathieuhays.co.uk/)!)
 
-= 2.0.2 [2014-10-10] =
+= 2.0.2, 2014-10-10 =
 * added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com/)!)
 
-= 2.0.1 [2014-08-31] =
+= 2.0.1, 2014-08-31 =
 * added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
 
-= 2.0.0 [2014-08-27] =
+= 2.0.0, 2014-08-27 =
 * changed: big refactor for better multisite support
 * fixed: site transients not counted properly
 * added: also clean up NextGEN Gallery 2.x display_gallery_rendered_* timeout aliases (thanks, Robert Park!)
 
-= 1.1.1 [2013-12-31] =
+= 1.1.1, 2013-12-31 =
 * fixed: manual deletion performs nonce check, to prevent unauthorised access
 
-= 1.1.0 [2013-10-19] =
+= 1.1.0, 2013-10-19 =
 * fixed: manual delete failed in WordPress multisite installations
 * changed: use LIKE instead of REGEXP in SQL statements, so that database index is utilised (better performance)
 * added: also clean up the essentially transient display_galleries_* timeout aliases for NextGEN Gallery 2.x
 
-= 1.0.0 [2013-07-27] =
+= 1.0.0, 2013-07-27 =
 * initial public release
