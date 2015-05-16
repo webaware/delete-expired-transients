@@ -80,10 +80,12 @@ class DelxtransNetwork {
 	*/
 	public function processActions() {
 		// check whether user has asked for deletions
-		$action = '';
-		if (!empty($_REQUEST['action'])) {
-			$action = $_REQUEST['action'];
+		$action = empty($_REQUEST['action']) ? '' : $_REQUEST['action'];
+		if ($action === '-1' && !empty($_REQUEST['action2'])) {
+			$action = $_REQUEST['action2'];
+		}
 
+		if (!empty($action)) {
 			$sendback = remove_query_arg(array('action', 'site_id', 'blog_id', 'blog_ids', 'message', 'delxtrans_nonce'), wp_get_referer());
 
 			$blog_ids = false;
