@@ -77,7 +77,7 @@ class DelxtransPlugin {
 	* load translation strings
 	*/
 	public function loadTranslations() {
-		load_plugin_textdomain('delxtrans', false, basename(dirname(DELXTRANS_PLUGIN_FILE)) . '/languages/');
+		load_plugin_textdomain('delete-expired-transients', false, basename(dirname(DELXTRANS_PLUGIN_FILE)) . '/languages/');
 	}
 
 	/**
@@ -157,10 +157,10 @@ class DelxtransPlugin {
 	*/
 	public function addPluginDetailsLinks($links, $file) {
 		if ($file == DELXTRANS_PLUGIN_NAME) {
-			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/delete-expired-transients">%s</a>', _x('Get help', 'plugin details links', 'delxtrans'));
-			$links[] = sprintf('<a href="https://wordpress.org/plugins/delete-expired-transients/">%s</a>', _x('Rating', 'plugin details links', 'delxtrans'));
-			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delxtrans'));
-			$links[] = sprintf('<a href="http://shop.webaware.com.au/downloads/delete-expired-transients/">%s</a>', _x('Donate', 'plugin details links', 'delxtrans'));
+			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/delete-expired-transients">%s</a>', _x('Get help', 'plugin details links', 'delete-expired-transients'));
+			$links[] = sprintf('<a href="https://wordpress.org/plugins/delete-expired-transients/">%s</a>', _x('Rating', 'plugin details links', 'delete-expired-transients'));
+			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delete-expired-transients'));
+			$links[] = sprintf('<a href="http://shop.webaware.com.au/downloads/delete-expired-transients/">%s</a>', _x('Donate', 'plugin details links', 'delete-expired-transients'));
 		}
 
 		return $links;

@@ -23,7 +23,7 @@ class DelxtransNetwork {
 	* admin menu items
 	*/
 	public function adminMenu() {
-		$title = __('Delete Transients', 'delxtrans');
+		$title = __('Delete Transients', 'delete-expired-transients');
 		add_submenu_page('settings.php', $title, $title, 'manage_network_options', 'delxtrans', array($this, 'networkDelete'));
 
 		$this->pageURL = admin_url('network/settings.php?page=delxtrans');
@@ -55,10 +55,10 @@ class DelxtransNetwork {
 		$site_counts = DelxtransCleaners::countSiteTransients($site->id);
 
 		$messages = array(
-			'expired'			=> __('Expired transients deleted.', 'delxtrans'),
-			'deleteall'			=> __('All transients deleted.', 'delxtrans'),
-			'site-expired'		=> __('Expired site transients deleted.', 'delxtrans'),
-			'site-deleteall'	=> __('All site transients deleted.', 'delxtrans'),
+			'expired'			=> __('Expired transients deleted.', 'delete-expired-transients'),
+			'deleteall'			=> __('All transients deleted.', 'delete-expired-transients'),
+			'site-expired'		=> __('Expired site transients deleted.', 'delete-expired-transients'),
+			'site-deleteall'	=> __('All site transients deleted.', 'delete-expired-transients'),
 		);
 
 		$message = false;

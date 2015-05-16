@@ -1,0 +1,135 @@
+# copyright (c) 2013-2014 WebAware Pty Ltd
+# This file is distributed under the same license as the plugin package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: delete-expired-transients\n"
+"Report-Msgid-Bugs-To: translate@webaware.com.au\n"
+"POT-Creation-Date: 2015-05-16 15:34+1000\n"
+"PO-Revision-Date: 2015-05-16 15:34+1000\n"
+"Last-Translator: translate@webaware.com.au\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class.DelxtransNetwork.php:26 includes/class.DelxtransSite.php:23
+msgid "Delete Transients"
+msgstr ""
+
+#: includes/class.DelxtransNetwork.php:58 views/admin-tools-page.php:13
+msgid "Expired transients deleted."
+msgstr ""
+
+#: includes/class.DelxtransNetwork.php:59 views/admin-tools-page.php:19
+msgid "All transients deleted."
+msgstr ""
+
+#: includes/class.DelxtransNetwork.php:60
+msgid "Expired site transients deleted."
+msgstr ""
+
+#: includes/class.DelxtransNetwork.php:61
+msgid "All site transients deleted."
+msgstr ""
+
+#: includes/class.DelxtransPlugin.php:160
+msgctxt "plugin details links"
+msgid "Get help"
+msgstr ""
+
+#: includes/class.DelxtransPlugin.php:161
+msgctxt "plugin details links"
+msgid "Rating"
+msgstr ""
+
+#: includes/class.DelxtransPlugin.php:162
+msgctxt "plugin details links"
+msgid "Translate"
+msgstr ""
+
+#: includes/class.DelxtransPlugin.php:163
+msgctxt "plugin details links"
+msgid "Donate"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:20
+msgctxt "a single site in network"
+msgid "Blog"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:21
+msgctxt "sites in network"
+msgid "Blogs"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:33
+msgid "Blog ID"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:34
+msgid "Blog Name"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:35
+msgid "Expired transients"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:36
+msgid "Total transients"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:57
+#: includes/class.DelxtransSiteListTable.php:140
+msgid "Delete expired"
+msgstr ""
+
+#: includes/class.DelxtransSiteListTable.php:58
+#: includes/class.DelxtransSiteListTable.php:144
+msgid "Delete all"
+msgstr ""
+
+#: views/admin-network-page.php:9 views/admin-tools-page.php:9
+msgid "Delete Expired Transients"
+msgstr ""
+
+#: views/admin-network-page.php:18
+#, php-format
+msgid "Site Transients: %s expired, %s total"
+msgstr ""
+
+#: views/admin-network-page.php:25
+msgid "Delete expired site transients"
+msgstr ""
+
+#: views/admin-network-page.php:30
+msgid "Delete all site transients"
+msgstr ""
+
+#: views/admin-tools-page.php:23
+#, php-format
+msgid "Expired transients: %s"
+msgstr ""
+
+#: views/admin-tools-page.php:24
+#, php-format
+msgid "Total transients: %s"
+msgstr ""
+
+#: views/admin-tools-page.php:31
+msgid "Delete transients"
+msgstr ""
+
+#: views/admin-tools-page.php:34
+msgid "expired transients"
+msgstr ""
+
+#: views/admin-tools-page.php:36
+msgid "all transients -- use with caution!"
+msgstr ""
+
+#: views/admin-tools-page.php:43
+msgid "Delete"
+msgstr ""

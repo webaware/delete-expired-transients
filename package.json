@@ -1,0 +1,17 @@
+{
+  "name": "delete-expired-transients",
+  "version": "2.0.4",
+  "description": "delete old, expired transients from WordPress wp_options table",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-pot": "^0.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webaware/delete-expired-transients.git"
+  },
+  "author": "WebAware http://webaware.com.au/",
+  "license": "GPLv2 or later",
+  "homepage": "https://wordpress.org/plugins/delete-expired-transients/"
+}

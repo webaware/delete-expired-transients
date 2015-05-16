@@ -20,7 +20,7 @@ class DelxtransSite {
 	* admin menu items
 	*/
 	public function adminMenu() {
-		$title = __('Delete Transients', 'delxtrans');
+		$title = __('Delete Transients', 'delete-expired-transients');
 		add_management_page($title, $title, 'manage_options', 'delxtrans', array($this, 'toolsDelete'));
 	}
 

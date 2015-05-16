@@ -6,7 +6,7 @@ Description: delete old, expired transients from WordPress wp_options table
 Version: 2.0.4-dev
 Author: WebAware
 Author URI: http://webaware.com.au/
-Text Domain: delxtrans
+Text Domain: delete-expired-transients
 Domain Path: /languages/
 */
 

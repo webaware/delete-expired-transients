@@ -17,8 +17,8 @@ class DelxtransSiteListTable extends WP_List_Table {
 
 		// Set defaults
 		parent::__construct( array(
-			'singular'	=> _x('Blog', 'a single site in network', 'delxtrans'),
-			'plural'	=> _x('Blogs', 'sites in network', 'delxtrans'),
+			'singular'	=> _x('Blog', 'a single site in network', 'delete-expired-transients'),
+			'plural'	=> _x('Blogs', 'sites in network', 'delete-expired-transients'),
 			'ajax'		=> false,
 		));
 	}
@@ -30,10 +30,10 @@ class DelxtransSiteListTable extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'			=> '<input type="checkbox" />',
-			'blog_id'		=> __('Blog ID', 'delxtrans'),
-			'blogname'		=> __('Blog Name', 'delxtrans'),
-			'expired'		=> __('Expired transients', 'delxtrans'),
-			'total'			=> __('Total transients', 'delxtrans'),
+			'blog_id'		=> __('Blog ID', 'delete-expired-transients'),
+			'blogname'		=> __('Blog Name', 'delete-expired-transients'),
+			'expired'		=> __('Expired transients', 'delete-expired-transients'),
+			'total'			=> __('Total transients', 'delete-expired-transients'),
 		);
 	}
 
@@ -54,8 +54,8 @@ class DelxtransSiteListTable extends WP_List_Table {
 	*/
 	function get_bulk_actions() {
 		return array(
-			'expired'	=> __('Delete expired', 'delxtrans'),
-			'deleteall'	=> __('Delete all', 'delxtrans'),
+			'expired'	=> __('Delete expired', 'delete-expired-transients'),
+			'deleteall'	=> __('Delete all', 'delete-expired-transients'),
 		);
 	}
 
@@ -137,11 +137,11 @@ class DelxtransSiteListTable extends WP_List_Table {
 		$actions = array(
 			'expired'	=> sprintf('<a href="%s">%s</a>',
 								wp_nonce_url(add_query_arg('action', 'expired', $action_url), 'blog-delete', 'delxtrans_nonce', false),
-								__('Delete expired', 'delxtrans')),
+								__('Delete expired', 'delete-expired-transients')),
 
 			'delete'	=> sprintf('<a href="%s">%s</a>',
 								wp_nonce_url(add_query_arg('action', 'deleteall', $action_url), 'blog-delete', 'delxtrans_nonce', false),
-								__('Delete all', 'delxtrans')),
+								__('Delete all', 'delete-expired-transients')),
 		);
 
 		return sprintf('%s %s', esc_html($item['blogname']), $this->row_actions($actions));
