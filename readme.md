@@ -9,4 +9,4 @@ delete old, expired transients from WordPress wp_options table
 * [Documentation](https://wordpress.org/plugins/delete-expired-transients/faq/)
 * [Support](https://wordpress.org/support/plugin/delete-expired-transients)
 * [Translate](https://translate.webaware.com.au/projects/delete-expired-transients)
-* [Donate](http://shop.webaware.com.au/downloads/delete-expired-transients/)
+* [Donate](shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients)
