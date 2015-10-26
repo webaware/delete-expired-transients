@@ -1,4 +1,4 @@
-# copyright (c) 2013-2014 WebAware Pty Ltd
+# copyright (c) 2013-2015 WebAware Pty Ltd
 # This file is distributed under the same license as the plugin package.
 #
 #, fuzzy
@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: delete-expired-transients\n"
 "Report-Msgid-Bugs-To: translate@webaware.com.au\n"
-"POT-Creation-Date: 2015-05-16 15:34+1000\n"
-"PO-Revision-Date: 2015-05-16 15:34+1000\n"
+"POT-Creation-Date: 2015-10-27 09:25+1100\n"
+"PO-Revision-Date: 2015-10-27 09:25+1100\n"
 "Last-Translator: translate@webaware.com.au\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: views/admin-network-page.php:18
 #, php-format
-msgid "Site Transients: %s expired, %s total"
+msgid "Site Transients: %1$s expired, %2$s total"
 msgstr ""
 
 #: views/admin-network-page.php:25

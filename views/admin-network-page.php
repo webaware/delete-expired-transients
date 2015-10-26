@@ -15,7 +15,7 @@ global $wp_version;
 	<?php endif; ?>
 
 	<p class="delxtran-site-counts"><?php
-		echo sprintf(__('Site Transients: %s expired, %s total', 'delete-expired-transients'),
+		echo sprintf(__('Site Transients: %1$s expired, %2$s total', 'delete-expired-transients'),
 			number_format_i18n($site_counts->expired), number_format_i18n($site_counts->total + $site_counts->never_expire));
 
 		$action_url = add_query_arg('site_id', $site->id, $this->pageURL);
