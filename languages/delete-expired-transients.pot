@@ -4,10 +4,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: delete-expired-transients\n"
+"Project-Id-Version: delete-expired-transients 2.0.4\n"
 "Report-Msgid-Bugs-To: translate@webaware.com.au\n"
-"POT-Creation-Date: 2015-10-27 09:25+1100\n"
-"PO-Revision-Date: 2015-10-27 09:25+1100\n"
+"POT-Creation-Date: 2015-12-02 14:14+1100\n"
+"PO-Revision-Date: 2015-12-02 14:14+1100\n"
 "Last-Translator: translate@webaware.com.au\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,121 +15,121 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: includes/class.DelxtransNetwork.php:26 includes/class.DelxtransSite.php:23
+#: includes/class.DelxtransNetwork.php:30 includes/class.DelxtransSite.php:27
 msgid "Delete Transients"
 msgstr ""
 
-#: includes/class.DelxtransNetwork.php:58 views/admin-tools-page.php:13
+#: includes/class.DelxtransNetwork.php:63 views/admin-tools-page.php:14
 msgid "Expired transients deleted."
 msgstr ""
 
-#: includes/class.DelxtransNetwork.php:59 views/admin-tools-page.php:19
+#: includes/class.DelxtransNetwork.php:64 views/admin-tools-page.php:20
 msgid "All transients deleted."
 msgstr ""
 
-#: includes/class.DelxtransNetwork.php:60
+#: includes/class.DelxtransNetwork.php:65
 msgid "Expired site transients deleted."
 msgstr ""
 
-#: includes/class.DelxtransNetwork.php:61
+#: includes/class.DelxtransNetwork.php:66
 msgid "All site transients deleted."
 msgstr ""
 
-#: includes/class.DelxtransPlugin.php:160
+#: includes/class.DelxtransPlugin.php:168
 msgctxt "plugin details links"
 msgid "Get help"
 msgstr ""
 
-#: includes/class.DelxtransPlugin.php:161
+#: includes/class.DelxtransPlugin.php:169
 msgctxt "plugin details links"
 msgid "Rating"
 msgstr ""
 
-#: includes/class.DelxtransPlugin.php:162
+#: includes/class.DelxtransPlugin.php:170
 msgctxt "plugin details links"
 msgid "Translate"
 msgstr ""
 
-#: includes/class.DelxtransPlugin.php:163
+#: includes/class.DelxtransPlugin.php:171
 msgctxt "plugin details links"
 msgid "Donate"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:20
+#: includes/class.DelxtransSiteListTable.php:24
 msgctxt "a single site in network"
 msgid "Blog"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:21
+#: includes/class.DelxtransSiteListTable.php:25
 msgctxt "sites in network"
 msgid "Blogs"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:33
+#: includes/class.DelxtransSiteListTable.php:37
 msgid "Blog ID"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:34
+#: includes/class.DelxtransSiteListTable.php:38
 msgid "Blog Name"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:35
+#: includes/class.DelxtransSiteListTable.php:39
 msgid "Expired transients"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:36
+#: includes/class.DelxtransSiteListTable.php:40
 msgid "Total transients"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:57
-#: includes/class.DelxtransSiteListTable.php:140
+#: includes/class.DelxtransSiteListTable.php:61
+#: includes/class.DelxtransSiteListTable.php:144
 msgid "Delete expired"
 msgstr ""
 
-#: includes/class.DelxtransSiteListTable.php:58
-#: includes/class.DelxtransSiteListTable.php:144
+#: includes/class.DelxtransSiteListTable.php:62
+#: includes/class.DelxtransSiteListTable.php:148
 msgid "Delete all"
 msgstr ""
 
-#: views/admin-network-page.php:9 views/admin-tools-page.php:9
+#: views/admin-network-page.php:10 views/admin-tools-page.php:10
 msgid "Delete Expired Transients"
 msgstr ""
 
-#: views/admin-network-page.php:18
+#: views/admin-network-page.php:19
 #, php-format
 msgid "Site Transients: %1$s expired, %2$s total"
 msgstr ""
 
-#: views/admin-network-page.php:25
+#: views/admin-network-page.php:26
 msgid "Delete expired site transients"
 msgstr ""
 
-#: views/admin-network-page.php:30
+#: views/admin-network-page.php:31
 msgid "Delete all site transients"
-msgstr ""
-
-#: views/admin-tools-page.php:23
-#, php-format
-msgid "Expired transients: %s"
 msgstr ""
 
 #: views/admin-tools-page.php:24
 #, php-format
+msgid "Expired transients: %s"
+msgstr ""
+
+#: views/admin-tools-page.php:25
+#, php-format
 msgid "Total transients: %s"
 msgstr ""
 
-#: views/admin-tools-page.php:31
+#: views/admin-tools-page.php:32
 msgid "Delete transients"
 msgstr ""
 
-#: views/admin-tools-page.php:34
+#: views/admin-tools-page.php:35
 msgid "expired transients"
 msgstr ""
 
-#: views/admin-tools-page.php:36
+#: views/admin-tools-page.php:37
 msgid "all transients -- use with caution!"
 msgstr ""
 
-#: views/admin-tools-page.php:43
+#: views/admin-tools-page.php:44
 msgid "Delete"
 msgstr ""

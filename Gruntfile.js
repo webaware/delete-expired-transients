@@ -7,7 +7,6 @@ module.exports = function (grunt) {
 			options: {
 				text_domain: "delete-expired-transients",
 				package_name: "delete-expired-transients",
-				package_version: "",
 				msgid_bugs_address: "translate@webaware.com.au",
 				encoding: "UTF-8",
 				dest: "languages/",
