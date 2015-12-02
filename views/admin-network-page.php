@@ -1,6 +1,10 @@
 <?php
 // Network menu page for plugin
 
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 global $wp_version;
 ?>
 

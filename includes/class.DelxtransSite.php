@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 /**
 * handler for stand-alone site or multisite blog not seen from network admin
 */

@@ -28,6 +28,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 define('DELXTRANS_PLUGIN_FILE', __FILE__);
 define('DELXTRANS_PLUGIN_ROOT', dirname(__FILE__) . '/');
 define('DELXTRANS_PLUGIN_NAME', basename(dirname(__FILE__)) . '/' . basename(__FILE__));

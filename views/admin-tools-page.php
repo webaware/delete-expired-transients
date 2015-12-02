@@ -1,6 +1,10 @@
 <?php
 // Tools menu page for plugin
 
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 global $wp_version;
 ?>
 
