@@ -4,12 +4,9 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
-
-global $wp_version;
 ?>
 
 <div class='wrap'>
-<?php if (version_compare($wp_version, '3.8', '<')) screen_icon(); ?>
 <h2><?php _e('Delete Expired Transients', 'delete-expired-transients'); ?></h2>
 
 <?php if ($action == 'delete-expired'): ?>
