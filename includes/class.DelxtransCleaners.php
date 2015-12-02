@@ -21,7 +21,7 @@ class DelxtransCleaners {
 		global $wpdb;
 
 		// get current PHP time, offset by a minute to avoid clashes with other tasks
-		$threshold = time() - 60;
+		$threshold = time() - MINUTE_IN_SECONDS;
 
 		// get table name for options on specified blog
 		$table = $wpdb->get_blog_prefix($blog_id) . 'options';
@@ -61,7 +61,7 @@ class DelxtransCleaners {
 		global $wpdb;
 
 		// get current PHP time, offset by a minute to avoid clashes with other tasks
-		$threshold = time() - 60;
+		$threshold = time() - MINUTE_IN_SECONDS;
 
 		// get table name for options on specified blog
 		$table = $wpdb->get_blog_prefix($blog_id) . 'options';
@@ -134,7 +134,7 @@ class DelxtransCleaners {
 		global $wpdb;
 
 		// get current PHP time, offset by a minute to avoid clashes with other tasks
-		$threshold = time() - 60;
+		$threshold = time() - MINUTE_IN_SECONDS;
 
 		// count transient expiration records, total and expired
 		$sql = "
@@ -176,7 +176,7 @@ class DelxtransCleaners {
 		global $wpdb;
 
 		// get current PHP time, offset by a minute to avoid clashes with other tasks
-		$threshold = time() - 60;
+		$threshold = time() - MINUTE_IN_SECONDS;
 
 		// delete expired transients, using the paired timeout record to find them
 		$sql = "

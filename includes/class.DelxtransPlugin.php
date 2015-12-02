@@ -123,7 +123,7 @@ class DelxtransPlugin {
 	public function taskNetwork() {
 		// only run on current blog if task hasn't been run for more than an hour
 		$last_run = get_site_option('delxtran_lastrun', array('time' => 0, 'blog_id' => 0));
-		if ($last_run['time'] + (60 * 60) < time()) {
+		if ($last_run['time'] + HOUR_IN_SECONDS < time()) {
 			global $wpdb;
 
 			// update the last run time, to prevent another blog running this task
