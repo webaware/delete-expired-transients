@@ -7,7 +7,7 @@ Donate link: http://shop.webaware.com.au/donations/?donation_for=Delete+Expired+
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.4
-Stable tag: 2.0.4
+Stable tag: 2.0.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -142,6 +142,10 @@ fixed bottom bulk-action on multisite network admin, localisation text domain ch
 == Changelog ==
 
 The full changelog can be found [on GitHub](https://github.com/webaware/delete-expired-transients/blob/master/changelog.md). Recent entries:
+
+### 2.0.4.1, 2015-12-02
+
+* fixed: "Class 'DelxtransCleaners' not found" when deleting expired transients
 
 ### 2.0.4, 2015-12-02
 

@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.0.4.1, 2015-12-02
+
+* fixed: "Class 'DelxtransCleaners' not found" when deleting expired transients
+
 ### 2.0.4, 2015-12-02
 
 * fixed: bottom bulk-action doesn't work on multisite network admin

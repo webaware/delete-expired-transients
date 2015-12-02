@@ -35,6 +35,8 @@ class DelxtransPlugin {
 		add_action(DELXTRANS_TASK_CLEAR_TRANSIENTS, array($this, 'taskSingleSite'));
 		add_action(DELXTRANS_TASK_CLEAR_TRANSIENTS_MS, array($this, 'taskNetwork'));
 
+		require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransCleaners.php';
+
 		// if we're not in admin, then else nothing to do; go home.
 		if (!is_admin()) {
 			return;
@@ -43,8 +45,6 @@ class DelxtransPlugin {
 		// other actions and filters
 		add_action('init', array($this, 'loadTranslations'));
 		add_filter('plugin_row_meta', array($this, 'addPluginDetailsLinks'), 10, 2);
-
-		require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransCleaners.php';
 
 		if (is_network_admin()) {
 			// has been network activated and is running in the network admin
