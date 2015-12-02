@@ -40,12 +40,16 @@ class DelxtransPlugin {
 		add_action('init', array($this, 'loadTranslations'));
 		add_filter('plugin_row_meta', array($this, 'addPluginDetailsLinks'), 10, 2);
 
+		require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransCleaners.php';
+
 		if (is_network_admin()) {
 			// has been network activated and is running in the network admin
+			require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransNetwork.php';
 			new DelxtransNetwork($this);
 		}
 		else {
 			// stand-alone site or blog on multisite
+			require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransSite.php';
 			new DelxtransSite($this);
 		}
 	}

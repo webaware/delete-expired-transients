@@ -48,6 +48,7 @@ class DelxtransNetwork {
 		if (!class_exists('WP_List_Table')) {
 			require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
 		}
+		require DELXTRANS_PLUGIN_ROOT . 'includes/class.DelxtransSiteListTable.php';
 		$sitelistTable = new DelxtransSiteListTable($this->plugin, $this->pageURL);
 
 		// get site transient counts
