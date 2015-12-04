@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.0.5, soon...
+
+* added: Hungarian translation (thanks, [Tom Vicces](http://www.erdekesseg.hu/)!)
+
 ### 2.0.4.1, 2015-12-02
 
 * fixed: "Class 'DelxtransCleaners' not found" when deleting expired transients
