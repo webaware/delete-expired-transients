@@ -4,7 +4,7 @@
 
 ### 2.0.5, soon...
 
-* added: Hungarian translation (thanks, [Tom Vicces](http://www.erdekesseg.hu/)!)
+* added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
 
 ### 2.0.4.1, 2015-12-02
 

@@ -30,7 +30,7 @@ Now optimised for WordPress Multisite.
 Many thanks to the generous efforts of our translators:
 
 * French (fr_FR) -- [Mathieu Hays](http://mathieuhays.co.uk/)
-* Hungarian (hu_HU) -- [Tom Vicces](http://www.erdekesseg.hu/)
+* Hungarian (hu_HU) -- [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 * Spanish (es_ES) -- [David Sandoval](http://BieberNoticias.com)
