@@ -29,11 +29,13 @@ Now optimised for WordPress Multisite.
 
 Many thanks to the generous efforts of our translators:
 
-* French (fr_FR) -- [Mathieu Hays](http://mathieuhays.co.uk/)
-* Hungarian (hu_HU) -- [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)
+* English (en_CA) -- [the English (Canadian) translation team](https://translate.wordpress.org/locale/en-ca/default/wp-plugins/delete-expired-transients)
+* French (fr_FR) -- [the French translation team](https://translate.wordpress.org/locale/fr/default/wp-plugins/delete-expired-transients)
+* Hungarian (hu_HU) -- [the Hungarian translation team](https://translate.wordpress.org/locale/hu/default/wp-plugins/delete-expired-transients)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
-* Spanish (es_ES) -- [David Sandoval](http://BieberNoticias.com)
+* Russian (ru_RU) -- [the Russian translation team](https://translate.wordpress.org/locale/ru/default/wp-plugins/delete-expired-transients)
+* Spanish (es_ES) -- [the Spanish translation team](https://translate.wordpress.org/locale/es/default/wp-plugins/delete-expired-transients)
 
 If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/delete-expired-transients).
 
