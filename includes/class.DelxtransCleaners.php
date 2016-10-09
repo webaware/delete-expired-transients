@@ -44,7 +44,7 @@ class DelxtransCleaners {
 		";
 		$counts->never_expire = $wpdb->get_var($sql);
 
-		// count obsolete WooCommerce sessions from version 2.4 and earlier
+		// count obsolete sessions from WooCommerce version 2.4 and earlier
 		$sql = "
 			select count(*)
 			from $table

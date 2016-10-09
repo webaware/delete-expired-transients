@@ -5,7 +5,7 @@
 ### 2.0.5, soon...
 
 * added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
-* added: manual deletion of obsolete WooCommerce sessions from version 2.4 and earlier
+* added: manual deletion of obsolete sessions from WooCommerce version 2.4 and earlier
 
 ### 2.0.4.1, 2015-12-02
 

@@ -40,7 +40,7 @@ if (!defined('ABSPATH')) {
 			<?php if ($counts->woocommerce_sessions): ?>
 			<li>
 				<input type="radio" name="delxtrans-action" id="delxtrans-woo-sessions" value="delete-woo-sessions" />
-				<label for="delxtrans-woo-sessions"><?php _e('obsolete WooCommerce sessions from version 2.4 and earlier', 'delete-expired-transients'); ?></label>
+				<label for="delxtrans-woo-sessions"><?php _e('obsolete sessions from WooCommerce version 2.4 and earlier', 'delete-expired-transients'); ?></label>
 			</li>
 			<?php endif; ?>
 		</ul>
