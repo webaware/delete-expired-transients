@@ -167,7 +167,7 @@ class DelxtransPlugin {
 		if ($file == DELXTRANS_PLUGIN_NAME) {
 			$links[] = sprintf('<a href="https://wordpress.org/support/plugin/delete-expired-transients">%s</a>', _x('Get help', 'plugin details links', 'delete-expired-transients'));
 			$links[] = sprintf('<a href="https://wordpress.org/plugins/delete-expired-transients/">%s</a>', _x('Rating', 'plugin details links', 'delete-expired-transients'));
-			$links[] = sprintf('<a href="https://translate.webaware.com.au/projects/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delete-expired-transients'));
+			$links[] = sprintf('<a href="https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients">%s</a>', _x('Translate', 'plugin details links', 'delete-expired-transients'));
 			$links[] = sprintf('<a href="https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients">%s</a>', _x('Donate', 'plugin details links', 'delete-expired-transients'));
 		}
 

@@ -37,7 +37,7 @@ Many thanks to the generous efforts of our translators:
 * Russian (ru_RU) -- [the Russian translation team](https://translate.wordpress.org/locale/ru/default/wp-plugins/delete-expired-transients)
 * Spanish (es_ES) -- [the Spanish translation team](https://translate.wordpress.org/locale/es/default/wp-plugins/delete-expired-transients)
 
-If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/delete-expired-transients).
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients).
 
 == Installation ==
 
@@ -96,7 +96,7 @@ NB: if your website has multiple networks (e.g. if you're running [WP Multi Netw
 
 == Contributions ==
 
-* [Translate into your preferred language](https://translate.webaware.com.au/projects/delete-expired-transients)
+* [Translate into your preferred language](https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients)
 * [Fork me on GitHub](https://github.com/webaware/delete-expired-transients)
 
 == Useful SQL queries ==
