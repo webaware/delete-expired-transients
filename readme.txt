@@ -1,15 +1,15 @@
 === Delete Expired Transients ===
 Contributors: webaware
 Plugin Name: Delete Expired Transients
-Plugin URI: http://shop.webaware.com.au/downloads/delete-expired-transients/
-Author URI: http://webaware.com.au/
-Donate link: http://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
+Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
+Author URI: https://webaware.com.au/
+Donate link: https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
 Tested up to: 4.5.2
 Stable tag: 2.0.4.1
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 delete old, expired transients from WordPress wp_options table
 
@@ -50,7 +50,7 @@ That's it! Expired transients will be deleted the next time you visit your websi
 
 = What is a "transient" anyway? =
 
-According to [Codex](http://codex.wordpress.org/Transients_API), transients are:
+According to [Codex](https://codex.wordpress.org/Transients_API), transients are:
 
 > a simple and standardized way of storing cached data in the database temporarily by giving it a custom name and a timeframe after which it will expire and be deleted.
 
@@ -78,7 +78,7 @@ NB: after you install and activate this plugin, the first thing it does is sched
 
 = Do I need this if I'm running an object cache? =
 
-No. Object caches like memcached are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](http://wpengine.com/2013/02/wordpress-transient-api/).
+No. Object caches like memcached are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](https://wpengine.com/2013/02/wordpress-transient-api/).
 
 = Can I change the schedule to run more often? =
 
