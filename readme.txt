@@ -4,10 +4,10 @@ Plugin Name: Delete Expired Transients
 Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
 Author URI: https://webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
-Tags: cache, clean, database, expired, transient, transients, wp_options
+Tags: cache, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.5.2
-Stable tag: 2.0.4.1
+Tested up to: 4.6.1
+Stable tag: 2.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -138,32 +138,15 @@ order by t1.option_value desc;`
 
 == Upgrade Notice ==
 
-= 2.0.4 =
+= 2.0.5 =
 
-fixed bottom bulk-action on multisite network admin, localisation text domain changed to delete-expired-transients
+added manual deletion of obsolete sessions from WooCommerce version 2.4 and earlier
 
 == Changelog ==
 
 The full changelog can be found [on GitHub](https://github.com/webaware/delete-expired-transients/blob/master/changelog.md). Recent entries:
 
-### 2.0.4.1, 2015-12-02
+### 2.0.5, 2016-10-09
 
-* fixed: "Class 'DelxtransCleaners' not found" when deleting expired transients
-
-### 2.0.4, 2015-12-02
-
-* fixed: bottom bulk-action doesn't work on multisite network admin
-* changed: localisation text domain now delete-expired-transients
-
-### 2.0.3, 2015-02-28
-
-* fixed: can delete site transients when there are only never-expire site transients
-* added: French translation (thanks, [Mathieu Hays](http://mathieuhays.co.uk/)!)
-
-### 2.0.2, 2014-10-10
-
-* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com/)!)
-
-### 2.0.1, 2014-08-31
-
-* added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
+* added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
+* added: manual deletion of obsolete sessions from WooCommerce version 2.4 and earlier
