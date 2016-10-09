@@ -21,3 +21,8 @@
 .wp-list-table .column-total {
 	text-align: center;
 }
+
+#delxtrans-tools legend {
+	font-weight: 600;
+	font-size: 1.3em;
+}

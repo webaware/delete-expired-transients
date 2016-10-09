@@ -44,6 +44,14 @@ class DelxtransCleaners {
 		";
 		$counts->never_expire = $wpdb->get_var($sql);
 
+		// count obsolete WooCommerce sessions from version 2.4 and earlier
+		$sql = "
+			select count(*)
+			from $table
+			where option_name like '\_wc\_session\_expires\_%'
+		";
+		$counts->woocommerce_sessions = $wpdb->get_var($sql);
+
 		return $counts;
 	}
 
@@ -115,6 +123,30 @@ class DelxtransCleaners {
 			or    option_name like '\_site\_transient\_%'
 			or    option_name like 'displayed\_galleries\_%'
 			or    option_name like 'displayed\_gallery\_rendering\_%'
+		";
+		$wpdb->query($sql);
+	}
+
+	/**
+	* clear obsolete WooCommerce sessions for blog
+	* @param int $blog_id
+	*/
+	public static function clearBlogWooCommerceSessions($blog_id) {
+		// sanity check
+		$blog_id = intval($blog_id);
+		if ($blog_id <= 0) {
+			return;
+		}
+
+		global $wpdb;
+
+		// get table name for options on specified blog
+		$table = $wpdb->get_blog_prefix($blog_id) . 'options';
+
+		// delete obsolete WooCommerce sessions and their expirations
+		$sql = "
+			delete from $table
+			where option_name like '\_wc\_session\_%'
 		";
 		$wpdb->query($sql);
 	}
