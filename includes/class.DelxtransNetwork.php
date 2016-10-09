@@ -20,7 +20,7 @@ class DelxtransNetwork {
 
 		add_action('load-settings_page_delxtrans', array($this, 'processActions'));
 		add_action('network_admin_menu', array($this, 'adminMenu'));
-		add_action('admin_enqueue_scripts', array($this, 'adminStyles'));
+		add_action('admin_print_styles-settings_page_delxtrans', array($this, 'adminStyles'));
 	}
 
 	/**
@@ -36,12 +36,9 @@ class DelxtransNetwork {
 	/**
 	* custom CSS for page
 	*/
-	public function adminStyles() {
-		$screen = get_current_screen();
-
-		if (!empty($screen->id) && $screen->id == 'settings_page_delxtrans-network') {
-			wp_enqueue_style('delxtran-admin', plugins_url('/css/admin.css', DELXTRANS_PLUGIN_FILE), false, DELXTRANS_PLUGIN_VERSION);
-		}
+	public function adminStyles($hook) {
+		$ver = SCRIPT_DEBUG ? time() : DELXTRANS_PLUGIN_VERSION;
+		wp_enqueue_style('delxtran-admin', plugins_url('/css/admin.css', DELXTRANS_PLUGIN_FILE), false, $ver);
 	}
 
 	/**
