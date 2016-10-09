@@ -7,10 +7,10 @@ if (!defined('ABSPATH')) {
 ?>
 
 <div class='wrap'>
-	<h2><?php _e('Delete Expired Transients', 'delete-expired-transients'); ?></h2>
+	<h1><?php _e('Delete Expired Transients', 'delete-expired-transients'); ?></h1>
 
 	<?php if (!empty($message)): ?>
-	<div class='updated fade'>
+	<div class='updated'>
 		<p><?php echo $message; ?></p>
 	</div>
 	<?php endif; ?>
@@ -23,12 +23,12 @@ if (!defined('ABSPATH')) {
 
 		if ($site_counts->expired > 0) {
 			$url = wp_nonce_url(add_query_arg('action', 'site-expired', $action_url), 'site-delete', 'delxtrans_nonce');
-			printf(' <a href="%s">%s</a>', $url, __('Delete expired site transients', 'delete-expired-transients'));
+			printf(' <a href="%s">%s</a>', esc_url($url), __('Delete expired site transients', 'delete-expired-transients'));
 		}
 
 		if ($site_counts->total + $site_counts->never_expire > 0) {
 			$url = wp_nonce_url(add_query_arg('action', 'site-deleteall', $action_url), 'site-delete', 'delxtrans_nonce');
-			printf(' <a class="delete" href="%s">%s</a>', $url, __('Delete all site transients', 'delete-expired-transients'));
+			printf(' <a class="delete" href="%s">%s</a>', esc_url($url), __('Delete all site transients', 'delete-expired-transients'));
 		}
 	?></p>
 
