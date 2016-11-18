@@ -2,7 +2,7 @@
 Contributors: webaware
 Plugin Name: Delete Expired Transients
 Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
-Author URI: https://webaware.com.au/
+Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
 Tags: cache, expired, transient, transients, wp_options
 Requires at least: 3.7

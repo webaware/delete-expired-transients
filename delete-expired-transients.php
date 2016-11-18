@@ -5,7 +5,7 @@ Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
 Description: delete old, expired transients from WordPress wp_options table
 Version: 2.0.5
 Author: WebAware
-Author URI: https://webaware.com.au/
+Author URI: https://shop.webaware.com.au/
 Text Domain: delete-expired-transients
 Domain Path: /languages/
 */
