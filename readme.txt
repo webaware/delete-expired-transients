@@ -30,6 +30,7 @@ Now optimised for WordPress Multisite.
 Many thanks to the generous efforts of our translators:
 
 * English (en_CA) -- [the English (Canadian) translation team](https://translate.wordpress.org/locale/en-ca/default/wp-plugins/delete-expired-transients)
+* English (en_GB) -- [the English (British) translation team](https://translate.wordpress.org/locale/en-gb/default/wp-plugins/delete-expired-transients)
 * French (fr_FR) -- [the French translation team](https://translate.wordpress.org/locale/fr/default/wp-plugins/delete-expired-transients)
 * Hungarian (hu_HU) -- [the Hungarian translation team](https://translate.wordpress.org/locale/hu/default/wp-plugins/delete-expired-transients)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
