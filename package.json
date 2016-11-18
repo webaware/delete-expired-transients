@@ -1,6 +1,6 @@
 {
   "name": "delete-expired-transients",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "delete old, expired transients from WordPress wp_options table",
   "main": "Gruntfile.js",
   "devDependencies": {

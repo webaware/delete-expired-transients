@@ -6,8 +6,8 @@ Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
 Tags: cache, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.6.1
-Stable tag: 2.0.5
+Tested up to: 4.7
+Stable tag: 2.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,13 +139,17 @@ order by t1.option_value desc;`
 
 == Upgrade Notice ==
 
-= 2.0.5 =
+= 2.0.6 =
 
-added manual deletion of obsolete sessions from WooCommerce version 2.4 and earlier
+tested to WordPress 4.7
 
 == Changelog ==
 
 The full changelog can be found [on GitHub](https://github.com/webaware/delete-expired-transients/blob/master/changelog.md). Recent entries:
+
+### 2.0.6, 2016-11-18
+
+* tested to WordPress 4.7
 
 ### 2.0.5, 2016-10-09
 

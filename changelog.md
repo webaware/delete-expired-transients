@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.0.6, 2016-11-18
+
+* tested to WordPress 4.7
+
 ### 2.0.5, 2016-10-09
 
 * added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
