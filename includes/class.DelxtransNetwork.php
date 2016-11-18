@@ -36,7 +36,7 @@ class DelxtransNetwork {
 	/**
 	* custom CSS for page
 	*/
-	public function adminStyles($hook) {
+	public function adminStyles() {
 		$ver = SCRIPT_DEBUG ? time() : DELXTRANS_PLUGIN_VERSION;
 		wp_enqueue_style('delxtran-admin', plugins_url('/css/admin.css', DELXTRANS_PLUGIN_FILE), false, $ver);
 	}
