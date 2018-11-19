@@ -29,8 +29,8 @@ if (!defined('ABSPATH')) {
 		if ($site_counts->total + $site_counts->never_expire > 0) {
 			$url = wp_nonce_url(add_query_arg('action', 'site-deleteall', $action_url), 'site-delete', 'delxtrans_nonce');
 			printf(' <a class="delete" href="%s">%s</a>', esc_url($url), __('Delete all site transients', 'delete-expired-transients'));
-		}
-	?></p>
+		} ?>
+	</p>
 
 	<form action="<?php echo esc_url($this->pageURL); ?>" method="post">
 	<?php wp_nonce_field('blog-delete', 'delxtrans_nonce', false); ?>

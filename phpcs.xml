@@ -18,7 +18,7 @@
 	<rule ref="Generic.Debug.ClosureLinter" />
 	<rule ref="Generic.Files.LineEndings" />
 	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
-	<rule ref="Generic.Metrics.CyclomaticComplexity" />
+	<!-- <rule ref="Generic.Metrics.CyclomaticComplexity" /> -->
 	<rule ref="Generic.Metrics.NestingLevel" />
 	<rule ref="Generic.PHP.NoSilencedErrors" />
 	<rule ref="Generic.PHP.DisallowShortOpenTag.Found" />
