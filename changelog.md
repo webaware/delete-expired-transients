@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2.0.7, 2018-11-19
+
+* tested: WordPress 5.0
+
 ### 2.0.6, 2016-11-18
 
 * tested to WordPress 4.7

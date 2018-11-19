@@ -3,7 +3,7 @@
 Plugin Name: Delete Expired Transients
 Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
 Description: delete old, expired transients from WordPress wp_options table
-Version: 2.0.6
+Version: 2.0.7
 Author: WebAware
 Author URI: https://shop.webaware.com.au/
 Text Domain: delete-expired-transients
@@ -11,7 +11,7 @@ Domain Path: /languages/
 */
 
 /*
-copyright (c) 2013-2016 WebAware Pty Ltd (email : support@webaware.com.au)
+copyright (c) 2013-2018 WebAware Pty Ltd (email : support@webaware.com.au)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {
 define('DELXTRANS_PLUGIN_FILE', __FILE__);
 define('DELXTRANS_PLUGIN_ROOT', dirname(__FILE__) . '/');
 define('DELXTRANS_PLUGIN_NAME', basename(dirname(__FILE__)) . '/' . basename(__FILE__));
-define('DELXTRANS_PLUGIN_VERSION', '2.0.6');
+define('DELXTRANS_PLUGIN_VERSION', '2.0.7');
 
 // scheduled tasks
 define('DELXTRANS_TASK_CLEAR_TRANSIENTS', 'delxtrans_cleartransients');

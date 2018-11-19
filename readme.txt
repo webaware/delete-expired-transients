@@ -1,4 +1,4 @@
-=== Delete Expired Transients ===
+# Delete Expired Transients
 Contributors: webaware
 Plugin Name: Delete Expired Transients
 Plugin URI: https://shop.webaware.com.au/downloads/delete-expired-transients/
@@ -6,14 +6,15 @@ Author URI: https://shop.webaware.com.au/
 Donate link: https://shop.webaware.com.au/donations/?donation_for=Delete+Expired+Transients
 Tags: cache, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.7
-Stable tag: 2.0.6
+Tested up to: 5.0
+Requires PHP: 5.3
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 delete old, expired transients from WordPress wp_options table
 
-== Description ==
+## Description
 
 Delete old, expired transients from the WordPress options table (`wp_options`), to prevent them from bloating your database and even slowing down your website.
 
@@ -25,31 +26,41 @@ There are a few other plugins around that clean up expired transients. This one 
 
 Now optimised for WordPress Multisite.
 
-= Translations =
+### Translations
 
 Many thanks to the generous efforts of our translators:
 
 * English (en_CA) -- [the English (Canadian) translation team](https://translate.wordpress.org/locale/en-ca/default/wp-plugins/delete-expired-transients)
 * English (en_GB) -- [the English (British) translation team](https://translate.wordpress.org/locale/en-gb/default/wp-plugins/delete-expired-transients)
+* English (en_ZA) -- [the English (South African) translation team](https://translate.wordpress.org/locale/en-za/default/wp-plugins/delete-expired-transients)
 * French (fr_FR) -- [the French translation team](https://translate.wordpress.org/locale/fr/default/wp-plugins/delete-expired-transients)
 * Hungarian (hu_HU) -- [the Hungarian translation team](https://translate.wordpress.org/locale/hu/default/wp-plugins/delete-expired-transients)
-* Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
-* Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
+* Norwegian: Bokmål (nb_NO) -- [neonnero](https://www.neonnero.com/)
+* Norwegian: Nynorsk (nn_NO) -- [neonnero](https://www.neonnero.com/)
 * Russian (ru_RU) -- [the Russian translation team](https://translate.wordpress.org/locale/ru/default/wp-plugins/delete-expired-transients)
 * Spanish (es_ES) -- [the Spanish translation team](https://translate.wordpress.org/locale/es/default/wp-plugins/delete-expired-transients)
 
 If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients).
 
-== Installation ==
+### Contributions
+
+* [Translate into your preferred language](https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients)
+* [Fork me on GitHub](https://github.com/webaware/delete-expired-transients)
+
+### Privacy
+
+Delete Expired Transients does not collect any personally identifying information, and does not set any cookies. It removes some old information from the database, potentially reducing a website's exposure to leakage of personally identifying information.
+
+## Installation
 
 1. Upload this plugin to your /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 That's it! Expired transients will be deleted the next time you visit your website, and then again once every day after that.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= What is a "transient" anyway? =
+### What is a "transient" anyway?
 
 According to [Codex](https://codex.wordpress.org/Transients_API), transients are:
 
@@ -57,35 +68,35 @@ According to [Codex](https://codex.wordpress.org/Transients_API), transients are
 
 NB: by default they are stored in the database, but if you have an object cache like memcached they won't be.
 
-= Do I need this plugin? =
+### Do I need this plugin?
 
 Most websites don't need this plugin. It all depends on what plugins are installed and how they are being used. Some plugins make heavy use of transients to improve website performance, and that can lead to a build up of old transient records in the database. If your wp_options table is growing and causing problems with website performance or backups, this plugin can help you by keeping transients under control.
 
-= Why do transients build up, and fill up my wp_options table? =
+### Why do transients build up, and fill up my wp_options table?
 
 With the current way that the transients API works, expired transients are only deleted when they are accessed after their expiration date. When transients are user-specific or otherwise fairly unique, they can sit there in the database forever unless some housekeeping task is run to clean them up. WordPress doesn't currently have such a housekeeping task. That's what this plugin does.
 
-= Will I lose any important data if I install this plugin? =
+### Will I lose any important data if I install this plugin?
 
 Only if you have a plugin that is really badly written. Transients can be deleted for a variety of reasons, because by definition they are considered ephemeral. They are considered safe to delete at any time because they are supposedly only ever going to contain information that can be rebuilt.
 
 There are some notable exceptions, e.g. some shopping carts store cart sessions in transients; this is obviously not information that can be easily rebuilt. That data will only be deleted by this plugin if it has expired, which means it would be deleted by WordPress anyway, so it is safe to use this plugin with shopping carts.
 
-= How do I know it's working? =
+### How do I know it's working?
 
 On the Tools menu in the WordPress admin, you will find a screen for deleting transients. It tells you how many expired transients there are in your database.
 
 NB: after you install and activate this plugin, the first thing it does is schedule a housekeeping task to delete expired transients. This means that there may not be any transients found when you visit this page in the tools menu straight after installing the plugin, because they may have already been deleted. You probably never need to delete expired transients manually, because they'll be automatically deleted daily.
 
-= Do I need this if I'm running an object cache? =
+### Do I need this if I'm running an object cache?
 
 No. Object caches like memcached are limited pools of data, and they already purge old data periodically so that they can fit newer data. This means that old transients will be removed from the cache automatically. It also means that new, fresh transients can be removed at any time too, which is why you should never store anything in a transient that can't be rebuilt easily. See this article on the WPEngine blog for more details: [A Technical Transients Treatise](https://wpengine.com/2013/02/wordpress-transient-api/).
 
-= Can I change the schedule to run more often? =
+### Can I change the schedule to run more often?
 
 Not yet. I'll consider adding a setting for that if it seems to be popular. I reckon daily is often enough even for busy websites. When network activated on multisite, it runs hourly to ensure it can get around all of the sites frequently enough.
 
-= How does the plugin handle multisite? =
+### How does the plugin handle multisite?
 
 If you activate it on individual sites within multisite, each site operates just the same as a stand-alone website.
 
@@ -95,12 +106,7 @@ The scheduled task also operates differently, batching up sites to clear expired
 
 NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](https://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean blog.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
 
-== Contributions ==
-
-* [Translate into your preferred language](https://translate.wordpress.org/projects/wp-plugins/delete-expired-transients)
-* [Fork me on GitHub](https://github.com/webaware/delete-expired-transients)
-
-== Useful SQL queries ==
+### Useful SQL queries
 
 Here's a few useful SQL queries to run in MySQL when you are trying to debug what's happening with transients.
 
@@ -132,26 +138,23 @@ where t1.option_name regexp '^(_site)?_transient_timeout_.*'
 and t1.option_value < unix_timestamp()
 order by t1.option_value desc;`
 
-== Screenshots ==
+## Screenshots
 
 1. Tools page for manually deleting transients
 2. Multisite network admin page for manually deleting transients
 
-== Upgrade Notice ==
+## Upgrade Notice
 
-= 2.0.6 =
+### 2.0.7
 
-tested to WordPress 4.7
+tested to WordPress 5.0
 
-== Changelog ==
+## Changelog
 
 The full changelog can be found [on GitHub](https://github.com/webaware/delete-expired-transients/blob/master/changelog.md). Recent entries:
 
-### 2.0.6, 2016-11-18
+### 2.0.7
 
-* tested to WordPress 4.7
+Released 2018-11-19
 
-### 2.0.5, 2016-10-09
-
-* added: Hungarian translation (thanks, [Tom Vicces](https://profiles.wordpress.org/theguitarlesson/)!)
-* added: manual deletion of obsolete sessions from WooCommerce version 2.4 and earlier
+* tested: WordPress 5.0
