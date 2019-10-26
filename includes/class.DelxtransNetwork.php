@@ -113,7 +113,6 @@ class DelxtransNetwork {
 						}
 						wp_redirect(add_query_arg('message', $action, $sendback));
 						exit;
-						break;
 
 					case 'deleteall':
 						foreach ($blog_ids as $blog_id) {
@@ -121,7 +120,6 @@ class DelxtransNetwork {
 						}
 						wp_redirect(add_query_arg('message', $action, $sendback));
 						exit;
-						break;
 
 				}
 			}
@@ -136,13 +134,11 @@ class DelxtransNetwork {
 						DelxtransCleaners::clearSiteExpired($site_id);
 						wp_redirect(add_query_arg('message', $action, $sendback));
 						exit;
-						break;
 
 					case 'site-deleteall':
 						DelxtransCleaners::clearSiteAll($site_id);
 						wp_redirect(add_query_arg('message', $action, $sendback));
 						exit;
-						break;
 
 				}
 			}
