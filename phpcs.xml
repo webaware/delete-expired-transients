@@ -20,8 +20,9 @@
 	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 	<!-- <rule ref="Generic.Metrics.CyclomaticComplexity" /> -->
 	<rule ref="Generic.Metrics.NestingLevel" />
-	<rule ref="Generic.PHP.NoSilencedErrors" />
+	<rule ref="Generic.NamingConventions.ConstructorName" />
 	<rule ref="Generic.PHP.DisallowShortOpenTag.Found" />
+	<rule ref="Generic.PHP.NoSilencedErrors" />
 	<rule ref="Generic.Strings.UnnecessaryStringConcat" />
 
 	<rule ref="Generic.PHP.ForbiddenFunctions">
@@ -48,5 +49,8 @@
 	</rule>
 
 	<rule ref="Squiz.PHP.CommentedOutCode" />
+	<rule ref="Squiz.PHP.DiscouragedFunctions" />
+	<rule ref="Squiz.PHP.NonExecutableCode" />
+	<rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
 
 </ruleset>
