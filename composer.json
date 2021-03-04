@@ -5,7 +5,7 @@
 		"dealerdirect/phpcodesniffer-composer-installer": "*"
 	},
 	"scripts": {
-		"lint": "php -l delete-expired-transients.php; find includes views -name '*.php' -exec php -l '{}' \\;",
+		"lint": "find . -path ./vendor -prune -o -path ./node_modules -prune -o -path './.*' -prune -o -name '*.php' -exec php -l '{}' \\; >/dev/null",
 		"sniff": "phpcs -ps && phpcs -ps --standard=phpcs-5.2.xml"
 	},
 	"prefer-stable" : true
