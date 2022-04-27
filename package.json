@@ -4,7 +4,7 @@
   "description": "delete old, expired transients from WordPress wp_options table",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.2",
     "grunt-shell": "^3.0.1"
   },
   "repository": {
